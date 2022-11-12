@@ -1,18 +1,24 @@
 package homeworks.hm5.two;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@Builder
 public class Student {
 
     private String name;
     private String surName;
-    List<Subject> subjectList = new ArrayList<>();
+    private List<Subject> subjectList = new ArrayList<>();
+
+    public Student(String name, String surName) {
+        this.name = name;
+        this.surName = surName;
+    }
 
     public boolean add(Subject subject) {
 
@@ -45,6 +51,6 @@ public class Student {
     }
 
     public void printInfo() {
-        this.toString();
+        System.out.println(this);
     }
 }

@@ -5,18 +5,9 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Student studentOne = Student.builder()
-                .surName("Ivanov")
-                .name("Ivan")
-                .subjectList(Arrays.asList())
-                .build();
 
-        Student studentTwo = Student.builder()
-                .surName("Aleksandrov")
-                .name("Aleksandr")
-                .subjectList(Arrays.asList())
-                .build();
-
+        Student studentOne = new Student("Ivan", "Ivanov");
+        Student studentTwo = new Student("Aleksandrov", "Aleksandr");
 
         studentOne.add(new Subject("математика", 5));
         studentOne.add(new Subject("физика", 4));
